@@ -1,0 +1,772 @@
+{
+    "Control-HMI Status Synchronization": [
+        {
+            "bound": 200,
+            "engine": "bmc"
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200
+        },
+        {
+            "bound": 200,
+            "engine": "bmc",
+            "fault_injection": true
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200,
+            "fault_injection": true
+        }
+    ],
+    "FDIR Fault Recovery Check": [
+        {
+            "bound": 200,
+            "engine": "bmc"
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200
+        },
+        {
+            "bound": 200,
+            "engine": "bmc",
+            "fault_injection": true
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200,
+            "fault_injection": true
+        }
+    ],
+    "FDIR Fault Recovery Check Completeness": [
+        {
+            "bound": 200,
+            "engine": "bmc"
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200
+        },
+        {
+            "bound": 200,
+            "engine": "bmc",
+            "fault_injection": true
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200,
+            "fault_injection": true
+        }
+    ],
+    "System Reset Verification": [
+        {
+            "bound": 200,
+            "engine": "bmc"
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200
+        },
+        {
+            "bound": 200,
+            "engine": "bmc",
+            "fault_injection": true
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200,
+            "fault_injection": true
+        }
+    ],
+    "System Reset Verification Completeness": [
+        {
+            "bound": 200,
+            "engine": "bmc"
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200
+        },
+        {
+            "bound": 200,
+            "engine": "bmc",
+            "fault_injection": true
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200,
+            "fault_injection": true
+        }
+    ],
+    "Motor Speed Matching": [
+        {
+            "bound": 200,
+            "engine": "bmc"
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200
+        },
+        {
+            "bound": 200,
+            "engine": "bmc",
+            "fault_injection": true
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200,
+            "fault_injection": true
+        }
+    ],
+    "hmi and motor Speed Matching": [
+        {
+            "bound": 200,
+            "engine": "bmc"
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200
+        },
+        {
+            "bound": 200,
+            "engine": "bmc",
+            "fault_injection": true
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200,
+            "fault_injection": true
+        }
+    ],
+    "hmi and motor Speed Matching at zero": [
+        {
+            "bound": 200,
+            "engine": "bmc"
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200
+        },
+        {
+            "bound": 200,
+            "engine": "bmc",
+            "fault_injection": true
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200,
+            "fault_injection": true
+        }
+    ],
+    "hmi and control Speed Matching": [
+        {
+            "bound": 200,
+            "engine": "bmc"
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200
+        },
+        {
+            "bound": 200,
+            "engine": "bmc",
+            "fault_injection": true
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200,
+            "fault_injection": true
+        }
+    ],
+    "control and motor Speed Matching": [
+        {
+            "bound": 200,
+            "engine": "bmc"
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200
+        },
+        {
+            "bound": 200,
+            "engine": "bmc",
+            "fault_injection": true
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200,
+            "fault_injection": true
+        }
+    ],
+    "hmi and control speed vMatching Completeness": [
+        {
+            "bound": 200,
+            "engine": "bmc"
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200
+        },
+        {
+            "bound": 200,
+            "engine": "bmc",
+            "fault_injection": true
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200,
+            "fault_injection": true
+        }
+    ],
+    "control and motor speed Matching Completeness": [
+        {
+            "bound": 200,
+            "engine": "bmc"
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200
+        },
+        {
+            "bound": 200,
+            "engine": "bmc",
+            "fault_injection": true
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200,
+            "fault_injection": true
+        }
+    ],
+    "hmi and motor Speed Matching Completeness": [
+        {
+            "bound": 200,
+            "engine": "bmc"
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200
+        },
+        {
+            "bound": 200,
+            "engine": "bmc",
+            "fault_injection": true
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200,
+            "fault_injection": true
+        }
+    ],
+    "hmi and motor Speed Matching Completeness at zero": [
+        {
+            "bound": 200,
+            "engine": "bmc"
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200
+        },
+        {
+            "bound": 200,
+            "engine": "bmc",
+            "fault_injection": true
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200,
+            "fault_injection": true
+        }
+    ],
+    "Continuous Current Monitoring": [
+        {
+            "bound": 200,
+            "engine": "bmc"
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200
+        },
+        {
+            "bound": 200,
+            "engine": "bmc",
+            "fault_injection": true
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200,
+            "fault_injection": true
+        }
+    ],
+    "Motor Speed Response Validation": [
+        {
+            "bound": 200,
+            "engine": "bmc"
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200
+        },
+        {
+            "bound": 200,
+            "engine": "bmc",
+            "fault_injection": true
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200,
+            "fault_injection": true
+        }
+    ],
+    "Fdir come back to nominal": [
+        {
+            "bound": 200,
+            "engine": "bmc"
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200
+        },
+        {
+            "bound": 200,
+            "engine": "bmc",
+            "fault_injection": true
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200,
+            "fault_injection": true
+        }
+    ],
+    "control come back to passive": [
+        {
+            "bound": 200,
+            "engine": "bmc"
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200
+        },
+        {
+            "bound": 200,
+            "engine": "bmc",
+            "fault_injection": true
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200,
+            "fault_injection": true
+        }
+    ],
+    "Maximum Safe Speed Monitoring": [
+        {
+            "bound": 200,
+            "engine": "bmc"
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200
+        },
+        {
+            "bound": 200,
+            "engine": "bmc",
+            "fault_injection": true
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200,
+            "fault_injection": true
+        }
+    ],
+    "Overcurrent Immediate Response": [
+        {
+            "bound": 200,
+            "engine": "bmc"
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200
+        },
+        {
+            "bound": 200,
+            "engine": "bmc",
+            "fault_injection": true
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200,
+            "fault_injection": true
+        }
+    ],
+    "Running Mode Current Limits": [
+        {
+            "bound": 200,
+            "engine": "bmc"
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200
+        },
+        {
+            "bound": 200,
+            "engine": "bmc",
+            "fault_injection": true
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200,
+            "fault_injection": true
+        }
+    ],
+    "Voltage-Triggered Safety Status": [
+        {
+            "bound": 200,
+            "engine": "bmc"
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200
+        },
+        {
+            "bound": 200,
+            "engine": "bmc",
+            "fault_injection": true
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200,
+            "fault_injection": true
+        }
+    ],
+    "Control Passive Status Confirmation": [
+        {
+            "bound": 200,
+            "engine": "bmc"
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200
+        },
+        {
+            "bound": 200,
+            "engine": "bmc",
+            "fault_injection": true
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200,
+            "fault_injection": true
+        }
+    ],
+    "Control degraded Verification": [
+        {
+            "bound": 200,
+            "engine": "bmc"
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200
+        },
+        {
+            "bound": 200,
+            "engine": "bmc",
+            "fault_injection": true
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200,
+            "fault_injection": true
+        }
+    ],
+    "Control fault Verification": [
+        {
+            "bound": 200,
+            "engine": "bmc"
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200
+        },
+        {
+            "bound": 200,
+            "engine": "bmc",
+            "fault_injection": true
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200,
+            "fault_injection": true
+        }
+    ],
+    "FDIR Degraded Status Check": [
+        {
+            "bound": 200,
+            "engine": "bmc"
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200
+        },
+        {
+            "bound": 200,
+            "engine": "bmc",
+            "fault_injection": true
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200,
+            "fault_injection": true
+        }
+    ],
+    "FDIR Fault Status Verification": [
+        {
+            "bound": 200,
+            "engine": "bmc"
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200
+        },
+        {
+            "bound": 200,
+            "engine": "bmc",
+            "fault_injection": true
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200,
+            "fault_injection": true
+        }
+    ],
+    "FDIR Normal Status Achievement": [
+        {
+            "bound": 200,
+            "engine": "bmc"
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200
+        },
+        {
+            "bound": 200,
+            "engine": "bmc",
+            "fault_injection": true
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200,
+            "fault_injection": true
+        }
+    ],
+    "Motor Stable Status Achievement": [
+        {
+            "bound": 200,
+            "engine": "bmc"
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200
+        },
+        {
+            "bound": 200,
+            "engine": "bmc",
+            "fault_injection": true
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200,
+            "fault_injection": true
+        }
+    ],
+    "Motor Speed Decrease Status Check": [
+        {
+            "bound": 200,
+            "engine": "bmc"
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200
+        },
+        {
+            "bound": 200,
+            "engine": "bmc",
+            "fault_injection": true
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200,
+            "fault_injection": true
+        }
+    ],
+    "Motor Speed Increase Status Check": [
+        {
+            "bound": 200,
+            "engine": "bmc"
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200
+        },
+        {
+            "bound": 200,
+            "engine": "bmc",
+            "fault_injection": true
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200,
+            "fault_injection": true
+        }
+    ],
+    "Motor Power Off Status Verification": [
+        {
+            "bound": 200,
+            "engine": "bmc"
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200
+        },
+        {
+            "bound": 200,
+            "engine": "bmc",
+            "fault_injection": true
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200,
+            "fault_injection": true
+        }
+    ],
+    "Direction-Speed Consistency Check": [
+        {
+            "bound": 200,
+            "engine": "bmc"
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200
+        },
+        {
+            "bound": 200,
+            "engine": "bmc",
+            "fault_injection": true
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200,
+            "fault_injection": true
+        }
+    ],
+    "Motor Speed Direction Verification": [
+        {
+            "bound": 200,
+            "engine": "bmc"
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200
+        },
+        {
+            "bound": 200,
+            "engine": "bmc",
+            "fault_injection": true
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200,
+            "fault_injection": true
+        }
+    ],
+    "Voltage Supply Base Status Verification": [
+        {
+            "bound": 200,
+            "engine": "bmc"
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200
+        },
+        {
+            "bound": 200,
+            "engine": "bmc",
+            "fault_injection": true
+        },
+        {
+            "bound": 200,
+            "engine": "klive",
+            "klive-bound": 200,
+            "fault_injection": true
+        }
+    ]
+}

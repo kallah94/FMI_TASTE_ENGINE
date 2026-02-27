@@ -1,0 +1,11 @@
+Syntax-error-Datamodel DEFINITIONS ::=
+BEGIN
+--  This file was generated automatically by OpenGEODE
+
+Syntax-error-States ::= ENUMERATED {syntax-error-has-no-state}
+
+Syntax-error-Context ::= SEQUENCE {
+init-done BOOLEAN
+}
+
+END

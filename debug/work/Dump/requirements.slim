@@ -1,0 +1,60 @@
+-- =================
+-- REQUIREMENTS.SLIM
+-- =================
+-- ------
+-- SYNTAX
+-- ------
+-- system implementation <SLIM FUNCTION NAME>.others
+-- properties
+--   Requirements => (
+--     [
+--       PropertyId => "<NAME OF PROPERTY>";
+--       Description => "<REQUIREMENT DESCRIPTION>";
+--     ],
+--     ...
+--   );
+-- end <SLIM FUNCTION NAME>.others;
+-- -------
+-- EXAMPLE
+-- -------
+-- system implementation SystemBlock.others
+-- properties
+--   Requirements => (
+--     [
+--       PropertyId => "At least one sensor not working";
+--       Description => "[SystemBlock.others] At least one sensor not working";
+--     ],
+--     [
+--       PropertyId => "Both sensors not working";
+--       Description => "[SystemBlock.others] Both sensors not working";
+--     ],
+--     [
+--       PropertyId => "Generator 1 LOW";
+--       Description => "[SystemBlock.others] Generator 1 LOW";
+--     ]
+--   );
+-- end SystemBlock.others;
+-- ----------------------
+-- DUMP OF INTERFACE VIEW
+-- ----------------------
+-- Function (SDL): Controller
+
+
+---- RI (Unprotected): input
+------ PARAM_IN (MyInteger): input.arg
+
+---- RI (Unprotected): thrust
+------ PARAM_OUT (MyInteger): thrust.arg
+
+
+-- Function (SLIM): Engine
+---- PI (Unprotected): input
+------ PARAM_IN (MyInteger): input.arg
+
+---- PI (Unprotected): thrust
+------ PARAM_OUT (MyInteger): thrust.arg
+
+
+
+
+--

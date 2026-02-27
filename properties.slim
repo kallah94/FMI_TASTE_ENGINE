@@ -1,0 +1,75 @@
+
+
+system implementation SystemBlock.others
+properties
+  Patterns => (
+  [
+    Name => "Hmi.Ready never reachable";
+    Pattern => "Globally, it is never the case that {hmi.mode = mode:ready} holds";
+  ],
+  [
+    Name => "Control.Ready never reachable";
+    Pattern => "Globally, it is never the case that {control.mode = mode:ready} holds";
+  ],
+  [
+    Name => "Control.ReducedSpeed never reachable";
+    Pattern => "Globally, it is never the case that {control.mode = mode:ReducedSpeed} holds";
+  ],
+  [
+    Name => "Control.EmergencyStop never reachable";
+    Pattern => "Globally, it is never the case that {control.mode = mode:EmergencyStop} holds";
+  ],
+  [
+    Name => "Fdir.Degraded never reachable";
+    Pattern => "Globally, it is never the case that {fdir.mode = mode:Degraded} holds";
+  ],
+  [
+    Name => "Fdir.Critical never reachable";
+    Pattern => "Globally, it is never the case that {fdir.mode = mode:Critical} holds";
+  ],
+  [
+    Name => "Yellow LED in HMI";
+    Pattern => "Globally, if {hmi.mode != mode:init} has occurred then in response {!hmi.RI_set_cp_leds_arg__STRUCT_FIELD_led_yellow} holds continually";
+  ],
+  [
+    Name => "Red LED in HMI";
+    Pattern => "Globally, if {hmi.mode != mode:init} has occurred then in response {!hmi.RI_set_cp_leds_arg__STRUCT_FIELD_led_red} holds continually";
+  ],
+  [
+    Name => "Motor stuck";
+    Pattern => "Globally, if {motor.mode != mode:init} has occurred then in response {motor.PI_get_speed.arg = 0} holds continually";
+  ],
+  [
+    Name => "No Voltage Fault";
+    Pattern => "Globally, if {voltage_supply.mode != mode:init} has occurred then in response {voltage_supply.PI_get_motor_voltage.arg > 0} holds continually";
+  ],
+  [
+    -- Expected to be false
+    Name => "Setpoint change";
+    Pattern => "Globally, if {hmi.mode != mode:init & control.PI_do_action.arg.cmd = cmd-forward} has occurred then in response {control.PI_do_action.arg.cmd = cmd-forward} holds continually";
+  ]
+  );
+
+  GenericProperties => (
+    [
+      -- Expected to be FALSE
+      Name => "System Reset";
+      Formula => "always(control.mode = mode:init -> always(control.mode = mode:emergencystop -> always(control.mode = mode:emergencystop)))";
+    ],
+    [
+      -- Expected to be FALSE
+      Name => "Motor runs forward";
+      Formula => "always(motor.mode = mode:stable -> never(motor.PI_get_speed.arg >= 250 and motor.PI_get_direction = forward))";
+    ],
+    [
+      -- Expected to be FALSE
+      Name => "Motor runs backward";
+      Formula => "always(motor.mode = mode:stable -> never(motor.PI_get_speed.arg >= 250 and motor.PI_get_direction = backward))";
+    ],
+    [
+      -- Expected to be TRUE, but not verifyable with ic3 and 50/50 bounds
+      Name => "Control responds to emergencyStop";
+      Formula => "always(control.mode = mode:ready -> always(control.PI_set_recovery.arg = emergencyStop -> not always(control.mode != mode:emergencystop)))";
+    ]
+  );
+end SystemBlock.others;

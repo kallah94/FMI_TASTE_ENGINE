@@ -1,0 +1,252 @@
+---------------------------------------------------
+-- AADL2.2
+-- TASTE type interfaceview
+-- 
+-- generated code: do not edit
+---------------------------------------------------
+
+
+
+PACKAGE interfaceview::IV::SystemBlock::Engine
+PUBLIC
+
+WITH Taste;
+WITH DataView;
+WITH TASTE_IV_Properties;
+WITH interfaceview::IV::SystemBlock::Controller;
+
+SUBPROGRAM PI_input
+FEATURES
+    arg : IN PARAMETER DataView::MyInteger {
+       Taste::encoding => NATIVE;
+    };
+END PI_input;
+
+SUBPROGRAM IMPLEMENTATION PI_input.others
+END PI_input.others;
+
+
+SUBPROGRAM PI_thrust
+FEATURES
+    arg : OUT PARAMETER DataView::MyInteger {
+       Taste::encoding => NATIVE;
+    };
+END PI_thrust;
+
+SUBPROGRAM IMPLEMENTATION PI_thrust.others
+END PI_thrust.others;
+
+
+
+SYSTEM Engine
+FEATURES
+   PI_input : PROVIDES SUBPROGRAM ACCESS interfaceview::IV:: SystemBlock:: Engine:: PI_input.others {
+      Taste::InterfaceName           => "input";            
+      Taste::RCMoperationKind        => unprotected;      
+      -- Unrecognized property: enable_multicast => true      
+      Taste::Communication_Layer     => "default";      
+      -- Unrecognized property: required_system_element => NO      
+      -- Unrecognized property: is_simulink_interface => false      
+      Compute_Execution_Time => 0 ms .. 0 ms;      
+      -- Unrecognized property: is_alarm => false      
+      -- Unrecognized property: is_compasta_ivar => false      
+      -- Unrecognized property: is_observable => false      
+   };
+   PI_thrust : PROVIDES SUBPROGRAM ACCESS interfaceview::IV:: SystemBlock:: Engine:: PI_thrust.others {
+      Taste::InterfaceName           => "thrust";            
+      Taste::RCMoperationKind        => unprotected;      
+      -- Unrecognized property: enable_multicast => true      
+      Taste::Communication_Layer     => "default";      
+      -- Unrecognized property: required_system_element => NO      
+      -- Unrecognized property: is_simulink_interface => false      
+      Compute_Execution_Time => 0 ms .. 0 ms;      
+      -- Unrecognized property: is_alarm => false      
+      -- Unrecognized property: is_compasta_ivar => false      
+      -- Unrecognized property: is_observable => false      
+   };
+PROPERTIES
+   -- ignored property: name = Engine
+   -- ignored property: is_type = NO
+   Source_Language => (Slim);
+   -- ignored property: default_implementation = default
+   -- ignored property: fixed_system_element = NO
+   -- ignored property: required_system_element = NO
+   Taste::Instances_Max => 1;
+   Taste::Instances_Min => 1;
+   Taste::Startup_Priority => 1;
+   TASTE_IV_Properties::Default_Codegen => Ada;
+
+END Engine;
+
+SYSTEM IMPLEMENTATION Engine.others
+END Engine.others;
+
+END interfaceview::IV::SystemBlock::Engine;
+
+
+
+PACKAGE interfaceview::IV::SystemBlock::Controller
+PUBLIC
+
+WITH Taste;
+WITH DataView;
+WITH TASTE_IV_Properties;
+WITH interfaceview::IV::SystemBlock::Engine;
+
+SUBPROGRAM PI_do_step
+END PI_do_step;
+
+SUBPROGRAM IMPLEMENTATION PI_do_step.others
+END PI_do_step.others;
+
+
+SUBPROGRAM RI_input
+FEATURES
+    arg : IN PARAMETER DataView::MyInteger {
+       Taste::encoding => NATIVE;
+    };
+END RI_input;
+
+SUBPROGRAM IMPLEMENTATION RI_input.others
+END RI_input.others;
+
+
+SUBPROGRAM RI_thrust
+FEATURES
+    arg : OUT PARAMETER DataView::MyInteger {
+       Taste::encoding => NATIVE;
+    };
+END RI_thrust;
+
+SUBPROGRAM IMPLEMENTATION RI_thrust.others
+END RI_thrust.others;
+
+
+
+SYSTEM Controller
+FEATURES
+   PI_do_step : PROVIDES SUBPROGRAM ACCESS interfaceview::IV:: SystemBlock:: Controller:: PI_do_step.others {
+      Taste::InterfaceName           => "do_step";            
+      Taste::RCMoperationKind        => cyclic;      
+      -- Unrecognized property: enable_multicast => true      
+      Taste::Communication_Layer     => "default";      
+      -- Unrecognized property: required_system_element => NO      
+      -- Unrecognized property: is_simulink_interface => false      
+      Taste::Interface_Stack_Size    => 1024;      
+      Taste::Interface_Cyclic_Offset => 0;      
+      Taste::RCMperiod               => 10 ms;      
+      Taste::Interface_Priority      => 1;      
+      Compute_Execution_Time => 0 ms .. 0 ms;      
+      -- Unrecognized property: is_compasta_ivar => false      
+   };
+   RI_input : REQUIRES SUBPROGRAM ACCESS interfaceview::IV:: SystemBlock:: Engine:: PI_input.others {
+      Taste::labelInheritance        => "true";
+      Taste::InterfaceName           => "input";            
+      Taste::RCMoperationKind        => unprotected;      
+      -- Unrecognized property: enable_multicast => true      
+      Taste::Communication_Layer     => "default";      
+      -- Unrecognized property: required_system_element => NO      
+      -- Unrecognized property: is_simulink_interface => false      
+      Compute_Execution_Time => 0 ms .. 0 ms;      
+      -- Unrecognized property: is_alarm => false      
+      -- Unrecognized property: is_compasta_ivar => false      
+      -- Unrecognized property: is_observable => false      
+   };
+   RI_thrust : REQUIRES SUBPROGRAM ACCESS interfaceview::IV:: SystemBlock:: Engine:: PI_thrust.others {
+      Taste::labelInheritance        => "true";
+      Taste::InterfaceName           => "thrust";            
+      Taste::RCMoperationKind        => unprotected;      
+      -- Unrecognized property: enable_multicast => true      
+      Taste::Communication_Layer     => "default";      
+      -- Unrecognized property: required_system_element => NO      
+      -- Unrecognized property: is_simulink_interface => false      
+      Compute_Execution_Time => 0 ms .. 0 ms;      
+      -- Unrecognized property: is_alarm => false      
+      -- Unrecognized property: is_compasta_ivar => false      
+      -- Unrecognized property: is_observable => false      
+   };
+PROPERTIES
+   -- ignored property: name = Controller
+   -- ignored property: is_type = NO
+   Source_Language => (SDL);
+   -- ignored property: default_implementation = default
+   -- ignored property: fixed_system_element = NO
+   -- ignored property: required_system_element = NO
+   Taste::Instances_Max => 1;
+   Taste::Instances_Min => 1;
+   Taste::Startup_Priority => 1;
+   TASTE_IV_Properties::Default_Codegen => Ada;
+
+END Controller;
+
+SYSTEM IMPLEMENTATION Controller.others
+END Controller.others;
+
+END interfaceview::IV::SystemBlock::Controller;
+
+
+PACKAGE interfaceview::IV::SystemBlock
+PUBLIC
+
+WITH Taste;
+WITH DataView;
+WITH TASTE_IV_Properties;
+WITH interfaceview::IV::SystemBlock::Controller;
+WITH interfaceview::IV::SystemBlock::Engine;
+
+
+SYSTEM SystemBlock
+PROPERTIES
+   -- ignored property: name = SystemBlock
+   -- ignored property: is_type = NO
+   Source_Language => (SDL);
+   -- ignored property: default_implementation = default
+   -- ignored property: fixed_system_element = NO
+   -- ignored property: required_system_element = NO
+   Taste::Instances_Max => 1;
+   Taste::Instances_Min => 1;
+   Taste::Startup_Priority => 1;
+   TASTE_IV_Properties::Default_Codegen => Ada;
+
+END SystemBlock;
+
+SYSTEM IMPLEMENTATION SystemBlock.others
+SUBCOMPONENTS
+   Engine : SYSTEM interfaceview::IV::SystemBlock::Engine::Engine.others;
+   Controller : SYSTEM interfaceview::IV::SystemBlock::Controller::Controller.others;
+   default : DATA DataView::Taste_Implementation {
+      Source_Language => (SDL);
+   };
+CONNECTIONS
+   Controller_RI_input_Engine_PI_input : SUBPROGRAM ACCESS Engine.PI_input -> Controller.RI_input;
+   Controller_RI_thrust_Engine_PI_thrust : SUBPROGRAM ACCESS Engine.PI_thrust -> Controller.RI_thrust;
+END SystemBlock.others;
+
+END interfaceview::IV::SystemBlock;
+
+
+PACKAGE interfaceview::IV
+PUBLIC
+
+WITH interfaceview::IV::SystemBlock;
+WITH Taste;
+WITH DataView;
+WITH TASTE_IV_Properties;
+
+SYSTEM interfaceview
+PROPERTIES
+   Taste::dataView     => ("DataView");
+   TASTE::dataViewPath => ("DataView.aadl");
+END interfaceview;
+
+SYSTEM IMPLEMENTATION interfaceview.others
+SUBCOMPONENTS
+  SystemBlock : SYSTEM interfaceview::IV::SystemBlock::SystemBlock.others;
+END interfaceview.others;
+
+PROPERTIES
+   Taste::dataView     => ("DataView");
+   Taste::dataViewPath => ("DataView.aadl");
+   Taste::coordinates  => "0 0 297000 210000";
+   Taste::version      => "3.0";
+END interfaceview::IV;

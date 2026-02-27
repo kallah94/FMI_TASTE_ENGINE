@@ -1,0 +1,59 @@
+-- ===============
+-- PROPERTIES.SLIM
+-- ===============
+-- ------
+-- SYNTAX
+-- ------
+-- system <SUBSYSTEM NAME>
+-- properties
+--   Patterns => (
+--     [
+--       Name => "<NAME>";
+--       Pattern => "<PATTERN>";
+--     ],
+--     ...
+--   );
+--   GenericProperties => (
+--     [
+--       Name => "<NAME>";
+--       Formula => "<FORMULA>";
+--     ],
+--     ...
+--   );
+-- end <SUBSYSTEM NAME>;
+-- -------
+-- EXAMPLE
+-- -------
+-- system HW_Block
+-- properties
+--   Patterns => (
+--     [
+--       Name => "All sensors working";
+--       Pattern => "Globally, it is always the case that {PI_is_valid_s1 and PI_is_valid_s2} holds";
+--     ]
+--   );
+-- end HW_Block;
+-- ----------------------
+-- DUMP OF INTERFACE VIEW
+-- ----------------------
+-- Function (SDL): Controller
+
+
+---- RI (Unprotected): input
+------ PARAM_IN (MyInteger): input.arg
+
+---- RI (Unprotected): thrust
+------ PARAM_OUT (MyInteger): thrust.arg
+
+
+-- Function (SLIM): Engine
+---- PI (Unprotected): input
+------ PARAM_IN (MyInteger): input.arg
+
+---- PI (Unprotected): thrust
+------ PARAM_OUT (MyInteger): thrust.arg
+
+
+
+
+--

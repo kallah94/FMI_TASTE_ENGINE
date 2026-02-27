@@ -1,0 +1,54 @@
+{
+   "scenario_start" : {
+      "domain" : [
+         "system.motor.PI_get_speed_arg = 0.0"
+      ],
+      "type" : "initial"
+   },
+   "scenario_intermediate" : {
+      "domain" : [
+         [
+            "system.motor.PI_get_speed_arg >= 250.0 & system.hmi.RI_set_cp_leds_arg__STRUCT_FIELD_led_green = TRUE & system.hmi.RI_set_cp_leds_arg__STRUCT_FIELD_led_yellow = FALSE & system.hmi.RI_set_cp_leds_arg__STRUCT_FIELD_led_red = FALSE"
+         ],
+         [
+            "system.motor.PI_get_speed_arg >= 250.0 & system.hmi.RI_set_cp_leds_arg__STRUCT_FIELD_led_green = TRUE & system.hmi.RI_set_cp_leds_arg__STRUCT_FIELD_led_yellow = FALSE & system.hmi.RI_set_cp_leds_arg__STRUCT_FIELD_led_red = FALSE",
+            "system.hmi.RI_set_cp_leds_arg__STRUCT_FIELD_led_green = FALSE & system.hmi.RI_set_cp_leds_arg__STRUCT_FIELD_led_yellow = TRUE & system.hmi.RI_set_cp_leds_arg__STRUCT_FIELD_led_red = FALSE"
+         ],
+         [
+            "system.motor.PI_get_speed_arg >= 250.0 & system.hmi.RI_set_cp_leds_arg__STRUCT_FIELD_led_green = TRUE & system.hmi.RI_set_cp_leds_arg__STRUCT_FIELD_led_yellow = FALSE & system.hmi.RI_set_cp_leds_arg__STRUCT_FIELD_led_red = FALSE",
+            "system.hmi.RI_set_cp_leds_arg__STRUCT_FIELD_led_green = FALSE & system.hmi.RI_set_cp_leds_arg__STRUCT_FIELD_led_yellow = FALSE & system.hmi.RI_set_cp_leds_arg__STRUCT_FIELD_led_red = TRUE"
+         ],
+         [
+            "system.motor.PI_get_speed_arg >= 250.0",
+            "system.motor.PI_get_speed_arg = 0.0 & system.hmi.RI_set_cp_leds_arg__STRUCT_FIELD_led_green = TRUE & system.hmi.RI_set_cp_leds_arg__STRUCT_FIELD_led_yellow = FALSE & system.hmi.RI_set_cp_leds_arg__STRUCT_FIELD_led_red = FALSE"
+         ],
+         [
+            "system.motor.PI_get_speed_arg >= 250.0",
+            "system.mlmonitor.PI_get_s_sensor_fault_fault & !system.mlmonitor.PI_get_c_sensor_fault_fault & !system.mlmonitor.PI_get_v_sensor_fault_fault & system.hmi.RI_set_cp_leds_arg__STRUCT_FIELD_led_green = FALSE & system.hmi.RI_set_cp_leds_arg__STRUCT_FIELD_led_yellow = TRUE & system.hmi.RI_set_cp_leds_arg__STRUCT_FIELD_led_red = FALSE"
+         ],
+         [
+            "system.motor.PI_get_speed_arg >= 250.0",
+            "!system.mlmonitor.PI_get_s_sensor_fault_fault & !system.mlmonitor.PI_get_c_sensor_fault_fault & system.mlmonitor.PI_get_v_sensor_fault_fault & system.hmi.RI_set_cp_leds_arg__STRUCT_FIELD_led_green = FALSE & system.hmi.RI_set_cp_leds_arg__STRUCT_FIELD_led_yellow = TRUE & system.hmi.RI_set_cp_leds_arg__STRUCT_FIELD_led_red = FALSE"
+         ],
+         [
+            "system.motor.PI_get_speed_arg >= 250.0",
+            "!system.mlmonitor.PI_get_s_sensor_fault_fault & system.mlmonitor.PI_get_c_sensor_fault_fault & !system.mlmonitor.PI_get_v_sensor_fault_fault & system.hmi.RI_set_cp_leds_arg__STRUCT_FIELD_led_green = FALSE & system.hmi.RI_set_cp_leds_arg__STRUCT_FIELD_led_yellow = TRUE & system.hmi.RI_set_cp_leds_arg__STRUCT_FIELD_led_red = FALSE"
+         ],
+         [
+            "system.motor.PI_get_speed_arg >= 250.0",
+            "system.mlmonitor.PI_get_s_sensor_fault_fault & !system.mlmonitor.PI_get_c_sensor_fault_fault & system.mlmonitor.PI_get_v_sensor_fault_fault & system.hmi.RI_set_cp_leds_arg__STRUCT_FIELD_led_green = FALSE & system.hmi.RI_set_cp_leds_arg__STRUCT_FIELD_led_yellow = FALSE & system.hmi.RI_set_cp_leds_arg__STRUCT_FIELD_led_red = TRUE"
+         ],
+         [
+            "system.motor.PI_get_speed_arg >= 250.0",
+            "!system.mlmonitor.PI_get_s_sensor_fault_fault & system.mlmonitor.PI_get_c_sensor_fault_fault & system.mlmonitor.PI_get_v_sensor_fault_fault & system.hmi.RI_set_cp_leds_arg__STRUCT_FIELD_led_green = FALSE & system.hmi.RI_set_cp_leds_arg__STRUCT_FIELD_led_yellow = TRUE & system.hmi.RI_set_cp_leds_arg__STRUCT_FIELD_led_red = FALSE"
+         ]
+      ],
+      "type" : "intermediate"
+   },
+   "scenario_end" : {
+      "domain" : [
+         "TRUE"
+      ],
+      "type" : "final"
+   }
+}

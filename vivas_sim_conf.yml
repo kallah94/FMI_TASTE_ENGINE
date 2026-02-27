@@ -1,0 +1,61 @@
+simulators:
+  simulator:
+    protocol: fmi
+    conf:
+      path: ./MotorKit.fmu
+  # simulator:
+  #   protocol: motorkit
+  #   conf:
+  #     # Command to create virtual serial port using socat
+  #     #  socat -d -d pty,raw,echo=0 pty,raw,echo=0
+  #     data_port: /dev/tty_motorkit_data
+  #     injection_port: /dev/tty_motorkit_injection
+
+
+mapping:
+  motor:
+    set_state:
+      - arg:
+          power: set_speed
+          direction: set_direction
+      - simulator
+    get_speed:
+      - arg: get_speed
+      - simulator
+    get_direction:
+      - arg: get_direction
+      - simulator
+    get_current:
+      - arg: get_current
+      - simulator
+    get_motor_voltage:
+      - arg: get_supply
+      - simulator
+  voltage_supply:
+    get_supply_status:
+      - arg: get_supply
+      - simulator
+    get_motor_voltage:
+      - arg: get_supply
+      - simulator
+  control_panel:
+    set_cp_leds:
+      - arg:
+          led-green: green_led
+          led-yellow: yellow_led
+          led-red: red_led
+      - simulator
+
+faults:
+  Faults_in_motor_speed:
+    StuckAtByValue_I_0_PI_get_speed_arg:
+      - speed_fault
+      - simulator
+  Faults_in_motor_current:
+    StuckAtByValue_I_6125_PI_get_current_arg:
+      - current_fault
+      - simulator
+  Faults_in_voltage_supply:
+    StuckAtByValue_I_0_PI_get_supply_status_arg:
+      - voltage_fault
+      - simulator

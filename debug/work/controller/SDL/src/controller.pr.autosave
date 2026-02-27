@@ -1,0 +1,8 @@
+system Syntax_Error;
+block Syntax_Error;
+/* CIF PROCESS (250, 150), (150, 75) */
+
+process Syntax_Error;
+endprocess Syntax_Error;
+endblock;
+endsystem;
